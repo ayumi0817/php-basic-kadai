@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title></title>
-      <meta charset="UTF-8">
-    </head>
-    <body>
-        <p>
-            <?php
-             class Foods{
-                public $name;
-                public $price;
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>
+        <?php
+         class Foods {
+            public $name;
+            public $price;
+
+            public function show_price() {
+                echo $this->price;
             }
+        }
 
-            $Food = new Foods();
-            $Food->name="potate";
-            $Food->price="250";
+        class Animals {
+            public $name;
+            public $height;
+            public $weight;
 
-            print_r($Food);
-            echo "<br>";
+            public function show_height() {
+                echo $this->height;
+            }
+        }
 
-             class Animals{
-                public $name;
-                public $height;
-                public $weight; 
-             }
+        $Food = new Foods();
+        $Food->name = "potate";
+        $Food->price = "250";
 
+        print_r($Food);
+        echo "<br>";
 
+        $Animal = new Animals();
+        $Animal->name = "dog";
+        $Animal->height = "60";
+        $Animal->weight = "5000";
 
-            $Animal=new Animals();
-                $Animal->name="dog";
-                $Animal->height="60";
-                $Animal->weight="5000";
+        print_r($Animal);
+        echo "<br>";
 
-            print_r($Animal);
-            echo "<br>";
-
-            function showFood($Food){
+        function showFood($Food) {
             echo $Food->price;
-            }
-            showFood($Food);
-            echo "<br>";
+        }
+        showFood($Food);
+        echo "<br>";
 
 
-            function showAnimal($Animal){
+        function showAnimal($Animal) {
             echo $Animal->height;
-            }
-            showAnimal($Animal);
-            echo "<br>";
+        }
+        showAnimal($Animal);
+        echo "<br>";
 
-            ?>
-        </p>
-    </body>
+        ?>
+    </p>
+</body>
 </html>
-
